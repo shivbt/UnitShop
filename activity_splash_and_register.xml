@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/root_layout"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Adding raw view to place app logo below that-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/raw_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <!--(Welcome text and user name and wishing like good morning)
+        or (register screen) goes here-->
+        <LinearLayout
+            android:layout_below="@+id/raw_view"
+            android:id="@+id/view_container"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="135dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--Logo goes here-->
+        <LinearLayout
+            android:layout_below="@+id/raw_view"
+            android:id="@+id/logo_container"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/unit_logo"
+                android:src="@drawable/unit_logo"
+                android:layout_width="@dimen/logo_size"
+                android:layout_height="@dimen/logo_size" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--Slogan section for store app goes here-->
+    <TextView
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:text="No Margin Sharing"
+        android:textColor="@color/white"
+        android:id="@+id/slogan_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>

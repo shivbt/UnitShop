@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <!--Product image-->
+    <ImageView
+        android:id="@+id/product_thumbnail"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_background"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <!--Product info container goes here-->
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <!--Product name goes here-->
+        <TextView
+            android:text="Fetching product name..."
+
+            android:minLines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:textColor="@android:color/black"
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product's company name goes here-->
+        <TextView
+            android:text="Fetching company name..."
+
+            android:minLines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:id="@+id/product_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product's quantity goes here-->
+        <TextView
+            android:text="Fetching other unique identifier..."
+
+            android:minLines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:id="@+id/other_unique_identifier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

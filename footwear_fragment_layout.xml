@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Product Image name field goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/colorAccent"
+            android:text="Product Images"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product pictures goes here-->
+        <android.support.v7.widget.CardView
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#ffffff"
+            android:id="@+id/order_or_slider_container"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <!--Image slider container goes here-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shop_image_slider_height">
+
+                <!--Sliding image goes here-->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!--Add more shop images, icon goes here-->
+                <ImageView
+                    android:padding="5dp"
+                    android:background="@drawable/icon_background_on_shop_image"
+                    android:id="@+id/add_more_shop_images"
+                    android:clickable="true"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="end|bottom"
+                    android:src="@drawable/ic_add_circle_24dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+                <!--Dots goes here-->
+                <LinearLayout
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp"
+                    android:id="@+id/dots_container"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--Camera icon goes here-->
+                <ImageView
+                    android:padding="5dp"
+                    android:background="@drawable/icon_background_on_shop_image"
+                    android:clickable="true"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_photo_camera_24dp"
+                    android:id="@+id/shop_image_camera_icon"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+                <!--Delete icon to delete shop image-->
+                <ImageView
+                    android:padding="5dp"
+                    android:background="@drawable/icon_background_on_shop_image"
+                    android:clickable="true"
+                    android:id="@+id/shop_image_delete_icon"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/ic_delete_24dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--Product information fields goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/colorAccent"
+            android:text="Product Information"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product name field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product name heading goes here-->
+            <TextView
+                android:text="Name "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product name edit text goes here-->
+            <EditText
+                android:id="@+id/product_name"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="30"
+                android:hint="Product name"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product's company name field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product company name heading goes here-->
+            <TextView
+                android:text="Company "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product company name edit text goes here-->
+            <EditText
+                android:id="@+id/company_name"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="20"
+                android:hint="Company name"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product type field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product type heading goes here-->
+            <TextView
+                android:text="Type "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product type edit text goes here-->
+            <EditText
+                android:id="@+id/product_type"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="20"
+                android:hint="Footwear type"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product suitable for (men/women/boy/girl/kid) field container goes here-->
+        <RadioGroup
+            android:id="@+id/suitable_for_radio_group"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Men radio button goes here-->
+            <RadioButton
+                android:text="Men"
+                android:textSize="16sp"
+                android:id="@+id/men_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Women radio button goes here-->
+            <RadioButton
+                android:text="Women"
+                android:textSize="16sp"
+                android:id="@+id/women_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Boys radio button goes here-->
+            <RadioButton
+                android:text="Boys"
+                android:textSize="16sp"
+                android:id="@+id/boys_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Girls radio buton goes here-->
+            <RadioButton
+                android:text="Girls"
+                android:textSize="16sp"
+                android:id="@+id/girls_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Kids radio button goes here-->
+            <RadioButton
+                android:text="Kids"
+                android:textSize="16sp"
+                android:id="@+id/kids_radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <!--Colour of product field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product colour heading goes here-->
+            <TextView
+                android:text="Colour "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product colour edit text goes here-->
+            <AutoCompleteTextView
+                android:id="@+id/product_colour"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="20"
+                android:hint="Footwear colour"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Material of product field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product material heading goes here-->
+            <TextView
+                android:text="Material "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product material edit text goes here-->
+            <AutoCompleteTextView
+                android:id="@+id/product_fabric"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="20"
+                android:hint="Material of footwear"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product size field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product size heading goes here-->
+            <TextView
+                android:text="Size "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product size edit text goes here-->
+            <EditText
+                android:id="@+id/product_size"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="4"
+                android:hint="Size of footwear"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product description heading goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            android:text="Description"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product description box goes here-->
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/description_box"
+                android:background="@drawable/description_box"
+                android:padding="5dp"
+                android:gravity="start"
+                android:hint="Write something about product"
+                android:scrollbarTrackVertical="@color/description_box_border"
+                android:scrollbars="vertical"
+                android:scrollbarSize="3dp"
+                android:maxLength="150"
+                android:minLines="3"
+                android:maxLines="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.CardView>
+
+        <!--Product MRP container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product MRP heading goes here-->
+            <TextView
+                android:text="MRP "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product MRP edit text goes here-->
+            <EditText
+                android:id="@+id/product_price"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="5"
+                android:hint="Product MRP"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product deal price container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product deal price heading goes here-->
+            <TextView
+                android:text="Deal Price "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product deal price edit text goes here-->
+            <EditText
+                android:id="@+id/product_deal_price"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="5"
+                android:hint="Product deal price with us"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Number of items container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Number of items heading goes here-->
+            <TextView
+                android:text="Number of items "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Number of items edit text goes here-->
+            <EditText
+                android:id="@+id/product_no_of_items"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="3"
+                android:hint="Number of items to sell online"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Cancel and add button will go here-->
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_with_solid_fill"
+                android:text="Cancel"
+                android:id="@+id/cancel_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/round_with_solid_fill"
+                android:text="Add"
+                android:id="@+id/add_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#fff"
+    app:cardElevation="6dp"
+    android:id="@+id/category_card"
+    android:clickable="true"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="227dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="160dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <!--Adding and subtracting button will go here-->
+        <LinearLayout
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:src="@drawable/ic_add_active"
+                android:clickable="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/increase_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:id="@+id/number_of_items"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:text="12"
+
+                android:minLines="1"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/ic_remove_circle_24dp"
+                android:clickable="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/decrease_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+        </LinearLayout>
+
+        <!--Sliding layout goes here-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <!--Sliding image of product goes here-->
+            <android.support.v4.view.ViewPager
+                android:background="@color/colorPrimary"
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--Indication dot layout goes here-->
+            <LinearLayout
+                android:background="@color/dot_indicator_back"
+                android:layout_gravity="bottom|center_horizontal"
+                android:orientation="horizontal"
+                android:id="@+id/dots_container"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:padding="2dp"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <!--Bottom section of product card where product name-->
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:minLines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:textColor="@android:color/black"
+            android:id="@+id/product_name"
+            android:textSize="16sp"
+            android:text="Fetching..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Company name goes here-->
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:minLines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:id="@+id/company_name"
+            android:text="Fetching..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Quantity of product goes here-->
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:minLines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:id="@+id/other_unique_identifier"
+            android:text="Fetching..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

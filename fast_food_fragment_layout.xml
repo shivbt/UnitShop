@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Product Image name field goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/colorAccent"
+            android:text="Product Images"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product pictures goes here-->
+        <android.support.v7.widget.CardView
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="#ffffff"
+            android:id="@+id/order_or_slider_container"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <!--Image slider container goes here-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shop_image_slider_height">
+
+                <!--Sliding image goes here-->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!--Add more shop images, icon goes here-->
+                <ImageView
+                    android:padding="5dp"
+                    android:background="@drawable/icon_background_on_shop_image"
+                    android:id="@+id/add_more_shop_images"
+                    android:clickable="true"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="end|bottom"
+                    android:src="@drawable/ic_add_circle_24dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+                <!--Dots goes here-->
+                <LinearLayout
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp"
+                    android:id="@+id/dots_container"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--Camera icon goes here-->
+                <ImageView
+                    android:padding="5dp"
+                    android:background="@drawable/icon_background_on_shop_image"
+                    android:clickable="true"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_photo_camera_24dp"
+                    android:id="@+id/shop_image_camera_icon"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+                <!--Delete icon to delete shop image-->
+                <ImageView
+                    android:padding="5dp"
+                    android:background="@drawable/icon_background_on_shop_image"
+                    android:clickable="true"
+                    android:id="@+id/shop_image_delete_icon"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="start"
+                    android:src="@drawable/ic_delete_24dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp" />
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--Product information fields goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@color/colorAccent"
+            android:text="Product Information"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product name field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product name heading goes here-->
+            <TextView
+                android:text="Name "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product name edit text goes here-->
+            <EditText
+                android:id="@+id/product_name"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="30"
+                android:hint="Product name"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product type field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product type heading goes here-->
+            <TextView
+                android:text="Type "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product type edit text goes here-->
+            <EditText
+                android:id="@+id/product_type"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="30"
+                android:hint="Product type"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Veg, Non-Veg button goes here-->
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Veg button goes here-->
+            <Button
+                android:background="@drawable/round_veg_button_no_fill"
+                android:id="@+id/veg_button"
+                android:text="Veg"
+                android:textColor="@color/veg_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Non-Veg button goes here-->
+            <Button
+                android:background="@drawable/round_non_veg_button_no_fill"
+                android:textColor="@color/non_veg_color"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:id="@+id/non_veg_button"
+                android:text="Non-Veg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product quantity field container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product quantity heading goes here-->
+            <TextView
+                android:text="Quantity "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product quantity edit text goes here-->
+            <EditText
+                android:id="@+id/product_quantity"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:maxLength="20"
+                android:hint="Product quantity"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product ingredients heading goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            android:text="Ingredients"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product ingredients box goes here-->
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/ingredients_box"
+                android:background="@drawable/description_box"
+                android:padding="5dp"
+                android:gravity="start"
+                android:hint="Write something about ingredient in products"
+                android:scrollbarTrackVertical="@color/description_box_border"
+                android:scrollbars="vertical"
+                android:scrollbarSize="3dp"
+                android:maxLength="150"
+                android:minLines="2"
+                android:maxLines="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.CardView>
+
+        <!--Product description heading goes here-->
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="@android:color/black"
+            android:text="Description"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Product description box goes here-->
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/description_box"
+                android:background="@drawable/description_box"
+                android:padding="5dp"
+                android:gravity="start"
+                android:hint="Write something about product"
+                android:scrollbarTrackVertical="@color/description_box_border"
+                android:scrollbars="vertical"
+                android:scrollbarSize="3dp"
+                android:maxLength="150"
+                android:minLines="3"
+                android:maxLines="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.CardView>
+
+        <!--Product price container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product price heading goes here-->
+            <TextView
+                android:text="Price "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product price edit text goes here-->
+            <EditText
+                android:id="@+id/product_price"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="3"
+                android:hint="Product price"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Product deal price container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Product deal price heading goes here-->
+            <TextView
+                android:text="Deal Price "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Product deal price edit text goes here-->
+            <EditText
+                android:id="@+id/product_deal_price"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="3"
+                android:hint="Product deal price with us"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Number of items container goes here-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Number of items heading goes here-->
+            <TextView
+                android:text="Number of items "
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Number of items edit text goes here-->
+            <EditText
+                android:id="@+id/product_no_of_items"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="3"
+                android:hint="Number of items to sell online"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Cancel and add button will go here-->
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_with_solid_fill"
+                android:text="Cancel"
+                android:id="@+id/cancel_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/round_with_solid_fill"
+                android:text="Add"
+                android:id="@+id/add_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

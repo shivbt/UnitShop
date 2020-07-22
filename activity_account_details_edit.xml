@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/activity_account_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/main_screen_background_color"
+    tools:context="com.ikai.unitshop.AccountDetailsEditActivity">
+
+    <android.support.v7.widget.CardView
+        card_view:cardCornerRadius="2dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardElevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Title goes here-->
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"
+                android:text="Account Details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Either edit option or show account details will be shown here dynamically-->
+            <ScrollView
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/account_details_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Bank name field goes here-->
+                    <EditText
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:id="@+id/bank_name_edit_text"
+                        android:hint="Bank Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Account Holder field goes here-->
+                    <EditText
+                        android:inputType="textPersonName"
+                        android:maxLength="50"
+                        android:id="@+id/account_holder_edit_text"
+                        android:hint="Account Holder Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Account number field goes here-->
+                    <EditText
+                        android:maxLength="20"
+                        android:inputType="number"
+                        android:id="@+id/account_number_edit_text"
+                        android:hint="Account Number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--IFSC Code field goes here-->
+                    <EditText
+                        android:inputType="text"
+                        android:maxLength="11"
+                        android:id="@+id/ifsc_code_edit_text"
+                        android:hint="IFSC Code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Aadhaar Number field-->
+                    <EditText
+                        android:maxLength="12"
+                        android:inputType="number"
+                        android:id="@+id/aadhaar_number_edit_text"
+                        android:hint="Aadhaar Number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--UPI VPA-->
+                    <EditText
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:id="@+id/upi_vpa_edit_text"
+                        android:hint="UPI VPA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Paytm Number-->
+                    <EditText
+                        android:maxLength="10"
+                        android:id="@+id/paytm_number_edit_text"
+                        android:inputType="number"
+                        android:hint="Paytm Number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Submit button-->
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white"
+                        android:text="Save"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

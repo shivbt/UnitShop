@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="24dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingRight="24dp"
+    android:layout_height="match_parent">
+
+    <!--Grid header goes here-->
+    <TextView
+        android:gravity="center_vertical"
+        android:text="Shop Photo"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <!--Icons container-->
+    <LinearLayout
+        android:paddingBottom="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Camera icon and camera text label goes here-->
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/camera_container"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Camera icon goes here-->
+            <ImageView
+                android:src="@drawable/camera"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <!--Text label goes here-->
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Gallery icon and gallery text label goes here-->
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/gallery_container"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Camera icon goes here-->
+            <ImageView
+                android:src="@drawable/gallery"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <!--Text label goes here-->
+            <TextView
+                android:layout_marginTop="8dp"
+                android:text="Gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Adding raw view to place shop owner image below that-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/raw_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <!--Either order details or image slider will go here-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/top_margin_for_order_or_image_slider"
+            android:layout_below="@+id/raw_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#ffffff"
+                android:id="@+id/order_or_slider_container"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content">
+
+                <!--Image slider container goes here-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/shop_image_slider_height">
+
+                    <!--Sliding image goes here-->
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!--Add more shop images, icon goes here-->
+                    <ImageView
+                        android:padding="5dp"
+                        android:background="@drawable/icon_background_on_shop_image"
+                        android:id="@+id/add_more_shop_images"
+                        android:clickable="true"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="end|bottom"
+                        android:src="@drawable/ic_add_circle_24dp"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp" />
+
+                    <!--Dots goes here-->
+                    <LinearLayout
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:id="@+id/dots_container"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!--Camera icon goes here-->
+                    <ImageView
+                        android:padding="5dp"
+                        android:background="@drawable/icon_background_on_shop_image"
+                        android:clickable="true"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_photo_camera_24dp"
+                        android:id="@+id/shop_image_camera_icon"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp" />
+
+                    <!--Delete icon to delete shop image-->
+                    <ImageView
+                        android:padding="5dp"
+                        android:background="@drawable/icon_background_on_shop_image"
+                        android:clickable="true"
+                        android:id="@+id/shop_image_delete_icon"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="start"
+                        android:src="@drawable/ic_delete_24dp"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp" />
+
+                </FrameLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <!--Shop owner image goes here-->
+        <FrameLayout
+            android:layout_below="@+id/raw_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Owner picture goes here-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/owner_photo"
+                app:civ_border_width="3dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/app_background"
+                app:civ_border_color="@color/white"
+                android:layout_width="@dimen/shop_owner_image_size"
+                android:layout_height="@dimen/shop_owner_image_size" />
+
+            <!--Progress bar on owner image-->
+            <ProgressBar
+                android:id="@+id/progress_bar_owner_photo"
+                android:layout_gravity="center"
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

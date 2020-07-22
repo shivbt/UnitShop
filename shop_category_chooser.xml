@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Text to choose shop category-->
+    <TextView
+        android:id="@+id/shop_cat_chooser_text"
+        android:layout_margin="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Choose Shop Category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--Show all categories-->
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/shop_cat_chooser_text"
+        android:layout_above="@+id/bottom_section"
+        android:id="@+id/cat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--Terms and Conditions text with check box and accept and continue button section-->
+    <LinearLayout
+        android:id="@+id/bottom_section"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Terms and condition text with check box-->
+        <LinearLayout
+            android:id="@+id/terms_conditions_layout"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Check Box-->
+            <CheckBox
+                android:layout_gravity="center_vertical"
+                android:id="@+id/term_condition_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Terms and condition text-->
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:text="@string/terms_and_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Accept and Continue button-->
+        <Button
+            android:id="@+id/accpet_and_continue_button"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:text="Accept and Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

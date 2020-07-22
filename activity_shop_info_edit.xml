@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_shop_info_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_background_color"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ikai.unitshop.ShopInfoEditActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_gravity="center"
+        android:layout_width="@dimen/register_or_welcome_card_width"
+
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardElevation="2dp"
+
+        card_view:cardUseCompatPadding="true"
+
+        android:layout_height="wrap_content">
+
+        <!--Welcome and form will go here-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:text="Shop Info"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/welcome_size"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+            <!--Store name section-->
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/register_form_icon_size"
+                    android:layout_height="@dimen/register_form_icon_size"
+                    android:src="@mipmap/ic_launcher" />
+                <EditText
+                    android:id="@+id/shop_name_edit_text"
+                    android:maxLength="60"
+                    android:hint="Shop Name"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--Mobile number section-->
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/register_form_icon_size"
+                    android:layout_height="@dimen/register_form_icon_size"
+                    android:src="@mipmap/ic_launcher" />
+                <EditText
+                    android:id="@+id/mobile_number_edit_text"
+                    android:maxLength="10"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--Store address section-->
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/register_form_icon_size"
+                    android:layout_height="@dimen/register_form_icon_size"
+                    android:src="@mipmap/ic_launcher" />
+                <EditText
+                    android:maxLength="150"
+                    android:id="@+id/shop_address_edit_text"
+                    android:hint="Shop Address"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--Pin Code section-->
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/register_form_icon_size"
+                    android:layout_height="@dimen/register_form_icon_size"
+                    android:src="@mipmap/ic_launcher" />
+                <EditText
+                    android:id="@+id/pin_code_edit_text"
+                    android:maxLength="6"
+                    android:hint="Pin Code"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!--Cancel and submit button will go here-->
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Cancel button-->
+                <Button
+                    android:clickable="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/cancel_button"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/round_with_stroke_no_fill"
+                    android:text="Cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <!--Save button-->
+                <Button
+                    android:clickable="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/save_button"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/round_with_stroke_no_fill"
+                    android:text="Save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</ScrollView>

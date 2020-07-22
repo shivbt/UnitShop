@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ikai.unitshop.AddProductWithSearchActivity">
+
+    <!--Did you mean and normal back layout for search bar goes here-->
+    <LinearLayout
+        android:paddingTop="68dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:id="@+id/did_you_mean_and_back_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--Card view for both search box and suggestion box-->
+    <android.support.v7.widget.CardView
+        app:cardBackgroundColor="#ffffff"
+        app:cardElevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Search box goes here-->
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Input text field goes here-->
+                <AutoCompleteTextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search_box"
+                    android:hint="Search Products to add"
+                    android:layout_toLeftOf="@+id/mic_icon"
+                    android:layout_toStartOf="@+id/mic_icon"
+                    android:layout_toRightOf="@+id/unit_flat_logo"
+                    android:layout_toEndOf="@+id/unit_flat_logo"
+                    android:inputType="text"
+                    android:completionThreshold="1"
+                    android:imeOptions="actionSearch"
+                    android:layout_centerInParent="true"
+                    android:dropDownAnchor="@+id/search_layout"
+                    android:clickable="true"
+                    android:background="#ffffff"/>
+
+                <!--UNiT logo goes here-->
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/logo"
+                    android:clickable="false"
+                    android:id="@+id/unit_flat_logo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+
+                <!--Mic icon goes here-->
+                <ImageButton
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_mic_active"
+                    android:id="@+id/mic_icon"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <!--Separator view between search box and suggestion box-->
+            <View
+                android:visibility="gone"
+                android:layout_below="@+id/search_layout"
+                android:id="@+id/separator"
+                android:background="@color/grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <!--Suggestion box goes here-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/suggestion_recycler_view"
+                android:layout_below="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--Show manually add the product when there is no suggestions-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/manually_add_text"
+                android:layout_below="@+id/suggestion_recycler_view"
+                android:text="Add Manually"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:textColor="@color/blue"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--Layout to show products and floating add button-->
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_below="@+id/did_you_mean_and_back_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Recycler view for product cards will goes here-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/product_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

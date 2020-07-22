@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/bottom_nav_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Recycler view to show selected categories of user-->
+    <android.support.v7.widget.RecyclerView
+        android:orientation="vertical"
+        android:id="@+id/category_recycler_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"/>
+
+    <!--Floating button to add categories-->
+    <android.support.design.widget.FloatingActionButton
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/fab_button"
+        android:clickable="true"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_add_white_24dp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:elevation="10dp" />
+
+</FrameLayout>
