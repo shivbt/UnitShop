@@ -1,2 +1,2 @@
 # UnitShop
-Final App for Seller
+Our Seller App
